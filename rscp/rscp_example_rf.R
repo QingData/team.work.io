@@ -29,7 +29,7 @@ print("input variables_____")
 
 ################# INPUT #######################
 ## first column is Y, following columns are predictors
-dd.ori = read.table("../data_pheno/rfMix_pheno_toRF_data.txt", header=T, sep=" ",  as.is=T)
+dd.ori = read.table("../example/pheno_toRF_data.txt", header=T, sep=" ",  as.is=T)
 
 ## setup the input file
 dd.ori[,1] = dd.ori[,1]-1  ## change Y from (1,2) to (0,1) $$ Y has to be 1 or 0
