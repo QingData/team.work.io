@@ -43,7 +43,7 @@ topPred
 ``` r
 rna_pred = dd.impor %>% select(splitVar, importance) %>% arrange(desc(importance))%>% head(n=30)
 rna_pred = rna_pred[-1, ]
-plot(1:nrow(rna_pred), rna_pred$importance, xlab="RNA-seq Index", ylab="Based on Gini Index", main="Improtanct of Top RNA-seq To Predict COVID Risk")
+plot(1:nrow(rna_pred), rna_pred$importance, xlab="RNA-seq Index", ylab="Based on Gini Index", main="Importance Scores of Top RNA-seq Predictor for COVID Risk")
 ```
 
 ![](RandomForest_CovidModel_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->

@@ -43,7 +43,7 @@ topPred
 ``` r
 rna_pred = dd.impor %>% select(splitVar, importance) %>% arrange(desc(importance))%>% head(n=40)
 rna_pred = rna_pred[-c(1,2), ]
-plot(1:nrow(rna_pred), rna_pred$importance, xlab="RNA-seq Index", ylab="Based on Gini Index", main="Improtanct of Top RNA-seq To Predict HTN Risk")
+plot(1:nrow(rna_pred), rna_pred$importance, xlab="RNA-seq Index", ylab="Based on Gini Index", main="Importance Scores of Top RNA-seq Predictors for HTN Risk")
 ```
 
 ![](RandomForest_HTNModel_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
