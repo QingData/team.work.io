@@ -44,6 +44,7 @@ dd$p.sig= -log10(dd$P.Value)
 ```
 
 Remove outliers from the table. Some traits that comes from one study with many GWAS hits for one trait. For example, to note that "Platelet Function Tests" return 16346 signification SNPs (11% of the GWAS hits). We would consider them as outliers.
+
 ```{r, echo=FALSE}
 library(dplyr)
 library(tidyverse)
@@ -128,7 +129,7 @@ oth.sameGene = dd.oth %>% group_by(Trait) %>% mutate(sameG = is.element(Gene, tr
 oth.sameGene = oth.sameGene %>% merge(oth.totalSNP) %>% mutate(prop=sameGCt/Freq) %>% arrange(desc(sameGCt))
 hist(oth.sameGene$prop)
 hist(oth.sameGene$sameGCt)
-oth.sameGene
+#oth.sameGene
 ```
 
 We would like to keep those traits with large number of shared genes with HTN related traits, at the same time, the proption of those shared genes is also high among trait specic hits. In anothe words, the large number of shared genes are not driven by its own large number of GWAS hits.
