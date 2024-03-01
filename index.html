@@ -58,16 +58,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="doc_pheGenoI_network_files/libs/clipboard/clipboard.min.js"></script>
-<script src="doc_pheGenoI_network_files/libs/quarto-html/quarto.js"></script>
-<script src="doc_pheGenoI_network_files/libs/quarto-html/popper.min.js"></script>
-<script src="doc_pheGenoI_network_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="doc_pheGenoI_network_files/libs/quarto-html/anchor.min.js"></script>
-<link href="doc_pheGenoI_network_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="doc_pheGenoI_network_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="doc_pheGenoI_network_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="doc_pheGenoI_network_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="doc_pheGenoI_network_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="pheno_geno_network_analysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="pheno_geno_network_analysis_files/libs/quarto-html/quarto.js"></script>
+<script src="pheno_geno_network_analysis_files/libs/quarto-html/popper.min.js"></script>
+<script src="pheno_geno_network_analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="pheno_geno_network_analysis_files/libs/quarto-html/anchor.min.js"></script>
+<link href="pheno_geno_network_analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="pheno_geno_network_analysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="pheno_geno_network_analysis_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="pheno_geno_network_analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="pheno_geno_network_analysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -122,9 +122,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="descriptive-analysis-of-gwas-results">Descriptive analysis of GWAS results</h3>
 <p>For visualization, it is easier to display the significant level of p-value than its original scale.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"//data/liq4/CCDGS_y2024/codeathon/script_network"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dd<span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"../publicdata/PheGenI_Association_full.tab"</span>, <span class="at">sep=</span><span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">header=</span>T, <span class="at">as.is=</span>T)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dd<span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/data/liq4/CCDGS_y2024/codeathon/publicdata/PheGenI_Association_full.tab"</span>, <span class="at">sep=</span><span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">header=</span>T, <span class="at">as.is=</span>T)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   136526 obs. of  16 variables:
  $ X.         : int  1 2 3 4 5 6 7 8 9 10 ...
@@ -240,7 +239,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -248,7 +247,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -256,7 +255,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -267,7 +266,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -275,7 +274,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -319,7 +318,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -366,7 +365,7 @@ Pulmonary Disease, Chronic Obstructive  274</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -374,7 +373,7 @@ Pulmonary Disease, Chronic Obstructive  274</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2393,7 +2392,7 @@ Pulmonary Disease, Chronic Obstructive  274</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2487,7 +2486,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2495,7 +2494,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2503,7 +2502,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2511,7 +2510,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-4.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-4.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2519,7 +2518,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-5.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-5.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2527,7 +2526,7 @@ Attaching package: 'ggVennDiagram'</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="doc_pheGenoI_network_files/figure-html/unnamed-chunk-15-6.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="pheno_geno_network_analysis_files/figure-html/unnamed-chunk-15-6.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
