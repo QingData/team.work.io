@@ -1,4 +1,4 @@
-Explore Top Predictors from Random Forest Model
+Explore Top Predictors for COVID from Random Forest Model
 ================
 
 ## Goal
