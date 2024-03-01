@@ -1,19 +1,7 @@
----
-title: "Example: Running Random Forest on Biowulf cluster"
-output: github_document
----
+## This file shows an example to run Random Forest approach for your data
+## This is an R script
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Goal
-
-This file show R script and cluster command to run Random Forest approach on data. 
-
-## Command to run on biowulf
-
-```{bash}
+############## Biowulf #################
 ## to run this on biowulf, in swarm file(myswarmfile), have the line as following
 #--------------------
 # R --no-save --args /lscratch/$SLURM_JOB_ID/ < rscp_example_rf.R > rout_rf.rout
@@ -21,12 +9,9 @@ This file show R script and cluster command to run Random Forest approach on dat
 
 ## submit your jobs
 ## swarm -f myswarmfile --module R --time=12:00:00 --gres=lscratch:50 -t 4 -g 20
-```
+############## Biowulf ------------------
 
-
-## R script with name as rscp_example_rf.R
-
-```{r rscp_example}
+## For RF package ranger, https://cran.r-project.org/web/packages/ranger/index.html
 
 
 library("stringr")
@@ -57,6 +42,7 @@ dd.test = dd.ori[, 1:4001]  ##!!!!@@ Be sure to commend out this line for real R
 colct = ncol(dd.test) -1
 colnames(dd.test)=c("Y", paste("v_", 1:colct, sep=""))
 ################# INPUT -------------------
+
 
 
 ################# OUTPUT #######################
@@ -106,31 +92,19 @@ for( tt in 1:treeCt){
     #reSplit = rbind(reSplit, maSplit)
 }
 ## write out the predition error for the forest
-sum <- prediction = c(seed.base, treeCt,  tryCt, forest$prediction.error)
+sum_prediction = c(seed.base, treeCt,  tryCt, forest$prediction.error)
+## just need to write out the line in the output file
+cat( paste(sum_prediction, collapse=","), file=out.pred, append=T, fill=T)
 
-          ## write out the predition error for the forest
-          re.pred = rbind(re.pred, c(seed.base+it, treeCt,  tryCt, forest$prediction.error))
-
-          ## write out importance for each predictors in the forest
-          f.impor = forest$variable.importance
-          re.impor = rbind(re.impor, cbind(seed.base+it, treeCt,  tryCt, names(f.impor), f.impor))
-write.table(sum, out.pred, col.names=FALSE, row.names=FALSE, append=T, sep=",")
+## write out the var importance for the forest
+f.impor = forest$variable.importance
+sum_impor = cbind(seed.base, treeCt, tryCt, names(f.impor), f.impor)
 write.table(re.impor, out.impor, col.names=FALSE, row.names=FALSE, append=T, sep=",", quote=FALSE)
+
 
 ################# RUN-RUN ------------------------
 
 ## move the output from scratch dir to current directory
 print(list.files(scrachDir))
 file.copy(from =c(out.impor, out.pred, out.split), to=".")
-```
 
-## May including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-#plot(pressure)
-```
-
-### Ref:
-For RF package ranger, https://cran.r-project.org/web/packages/ranger/index.html
