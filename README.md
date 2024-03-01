@@ -1,4 +1,4 @@
-# Random Forest for Genomic Assocation Detection
+# Random Forest for Genomic Association Detection
 
 List of participants and affiliations:
 - Weiping Chen (NIDDK) (Team Leader)

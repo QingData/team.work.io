@@ -41,8 +41,8 @@ topPred
     ## 6  v_17675  0.09555708
 
 ``` r
-rna_pred = dd.impor %>% select(splitVar, importance) %>% arrange(desc(importance))%>% head(n=30)
-rna_pred = rna_pred[-1, ]
+rna_pred = dd.impor %>% select(splitVar, importance) %>% arrange(desc(importance))%>% head(n=100)
+rna_pred = rna_pred[-c(1:3), ]
 plot(1:nrow(rna_pred), rna_pred$importance, xlab="RNA-seq Index", ylab="Based on Gini Index", main="Importance Scores of Top RNA-seq Predictor for COVID Risk")
 ```
 
